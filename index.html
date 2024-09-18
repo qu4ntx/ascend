@@ -40,15 +40,15 @@
       color: #CCB045; /* Gold color for the text */
     }
 
-    /* Background decorative image, fixed to bottom left */
+    /* Background decorative image, fixed to bottom right */
     body::before {
       content: '';
       position: fixed;
-      bottom: 0;
-      left: 0;
+      bottom: 0; /* Position at the bottom */
+      right: 0; /* Position at the right */
       width: 500px;
       height: 500px;
-      background: url('web_design_ascend.png') no-repeat;
+      background: url('your-image.png') no-repeat bottom right;
       background-size: contain;
       z-index: 0; /* Keep the background behind other content */
     }
