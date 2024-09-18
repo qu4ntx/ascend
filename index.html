@@ -56,4 +56,23 @@
 
   <script>
     const sports = [
-      "
+      "Cycling", 
+      "Weightlifting", 
+      "Basketball", 
+      "Futsal", 
+      "Hiking", 
+      "Table Tennis", 
+      "Running"
+    ];
+
+    function getRandomSport() {
+      const randomIndex = Math.floor(Math.random() * sports.length);
+      return sports[randomIndex];
+    }
+
+    // Load a random sport division when the page loads
+    document.getElementById("randomSport").textContent = getRandomSport();
+  </script>
+
+</body>
+</html>
