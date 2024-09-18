@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sports Division</title>
   <style>
-    /* General body styling with background image */
+    /* General body styling */
     body {
       display: flex;
       justify-content: center;
@@ -14,8 +14,7 @@
       margin: 0;
       background-color: #040000; /* Dark black background */
       font-family: 'Trebuchet MS', sans-serif; /* Closest font to the one in the design */
-      background: url('web_design_ascend.png') no-repeat left bottom; /* Background image at the bottom-left */
-      background-size: contain; /* Contain the image within the body */
+      position: relative;
     }
 
     /* Main container */
@@ -23,6 +22,7 @@
       display: flex;
       align-items: center;
       text-align: left;
+      z-index: 1; /* Ensure the container content is above the background image */
     }
 
     /* Circle style */
@@ -38,6 +38,19 @@
     .sport {
       font-size: 5em;
       color: #CCB045; /* Gold color for the text */
+    }
+
+    /* Background decorative image, fixed to bottom left */
+    body::before {
+      content: '';
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 500px;
+      height: 500px;
+      background: url('your-image.png') no-repeat;
+      background-size: contain;
+      z-index: 0; /* Keep the background behind other content */
     }
 
   </style>
