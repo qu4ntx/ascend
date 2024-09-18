@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Activity</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+    }
+    h1 {
+      font-size: 3em;
+      color: #333;
+    }
+    p {
+      font-size: 1.2em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 id="randomWord">Loading...</h1>
+    <p>Check out this random activity!</p>
+  </div>
+
+  <script>
+    const activities = [
+      "cycling", 
+      "weightlifting", 
+      "basketball", 
+      "futsal", 
+      "hiking", 
+      "table tennis", 
+      "running"
+    ];
+
+    function getRandomActivity() {
+      const randomIndex = Math.floor(Math.random() * activities.length);
+      return activities[randomIndex];
+    }
+
+    document.getElementById("randomWord").textContent = getRandomActivity();
+  </script>
+
+</body>
+</html>
