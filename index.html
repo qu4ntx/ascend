@@ -14,14 +14,14 @@
       margin: 0;
       background-color: #040000; /* Dark black background */
       font-family: 'Trebuchet MS', sans-serif; /* Closest font to the one in the design */
+      position: relative;
     }
 
     /* Main container */
     .container {
-      position: relative;
-      text-align: left;
       display: flex;
       align-items: center;
+      text-align: left;
     }
 
     /* Circle style */
@@ -41,7 +41,7 @@
 
     /* Decorative element for bottom corner */
     .bottom-deco {
-      position: absolute;
+      position: fixed; /* Fixes the image at the bottom-right of the viewport */
       bottom: 0;
       right: 0;
       width: 500px;
@@ -64,7 +64,7 @@
     </div>
   </div>
 
-  <!-- Optional bottom corner decoration -->
+  <!-- Fixed bottom corner decoration -->
   <div class="bottom-deco"></div>
 
   <script>
