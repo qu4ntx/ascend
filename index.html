@@ -3,35 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Random Activity</title>
+  <title>ASCEND Club - Random Activity</title>
   <style>
+    /* General body styles */
     body {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: #f0f0f0;
-      font-family: Arial, sans-serif;
       margin: 0;
+      background-color: #000000; /* Black background */
+      font-family: 'Arial', sans-serif;
     }
+
+    /* Container for content */
     .container {
       text-align: center;
+      color: #F5E6CC; /* Light gold color for text */
     }
+
+    /* Main header style for club name */
     h1 {
-      font-size: 3em;
-      color: #333;
+      font-size: 4em;
+      color: #E3B23C; /* Rich gold color */
+      margin: 0;
     }
+
+    /* Activity display styling */
+    h2 {
+      font-size: 3em;
+      color: #F5E6CC; /* Light gold for the activity text */
+      margin: 20px 0;
+    }
+
+    /* Additional text (subtitle) */
     p {
       font-size: 1.2em;
-      color: #666;
+      color: #F5E6CC; /* Light gold for the subtitle text */
+    }
+
+    /* Triangle design in the corner */
+    .triangle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 0;
+      height: 0;
+      border-left: 60px solid transparent;
+      border-right: 60px solid transparent;
+      border-bottom: 60px solid #E3B23C; /* Gold triangle */
+    }
+
+    /* Animated runner */
+    .runner {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      width: 150px;
+    }
+
+    /* Button styles */
+    button {
+      background-color: #E3B23C;
+      border: none;
+      color: black;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #F5E6CC;
     }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <h1 id="randomWord">Loading...</h1>
-    <p>Check out this random activity!</p>
+    <!-- Club name -->
+    <h1>ASCEND</h1>
+    
+    <!-- Random activity display -->
+    <h2 id="randomWord">Loading...</h2>
+    <p>Engage in an activity today!</p>
+
+    <!-- Refresh activity button -->
+    <button onclick="refreshActivity()">New Activity</button>
+
+    <!-- Decorative elements -->
+    <div class="triangle"></div>
+    <img src="https://qu4ntx.github.io/ascend/runner.png" alt="Running man" class="runner">
   </div>
 
   <script>
@@ -50,6 +113,11 @@
       return activities[randomIndex];
     }
 
+    function refreshActivity() {
+      document.getElementById("randomWord").textContent = getRandomActivity();
+    }
+
+    // Initial load
     document.getElementById("randomWord").textContent = getRandomActivity();
   </script>
 
