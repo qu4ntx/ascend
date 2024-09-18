@@ -5,77 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ASCEND Club - Random Activity</title>
   <style>
-    /* General body styles */
+    /* General body styling */
     body {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
-      background-color: #000000; /* Black background */
-      font-family: 'Arial', sans-serif;
+      background-color: #000000; /* Elegant black background */
+      font-family: 'Georgia', serif; /* Serif font for a high-class feel */
+      color: #E3B23C; /* Rich gold color */
     }
 
-    /* Container for content */
+    /* Central container for content */
     .container {
       text-align: center;
-      color: #F5E6CC; /* Light gold color for text */
     }
 
-    /* Main header style for club name */
+    /* Main header style for ASCEND */
     h1 {
-      font-size: 4em;
-      color: #E3B23C; /* Rich gold color */
-      margin: 0;
+      font-size: 5em; /* Large font for a bold statement */
+      font-weight: 600; /* Bold, but not too heavy */
+      letter-spacing: 2px; /* Spaced out letters for elegance */
+      margin: 0 0 20px 0;
     }
 
-    /* Activity display styling */
+    /* Subheader style for the random activity */
     h2 {
-      font-size: 3em;
-      color: #F5E6CC; /* Light gold for the activity text */
-      margin: 20px 0;
+      font-size: 3em; /* Smaller than the main header, but still prominent */
+      font-weight: 400; /* Light font weight for contrast with the main header */
+      margin: 10px 0 0 0;
     }
 
-    /* Additional text (subtitle) */
+    /* Subtle instruction text */
     p {
       font-size: 1.2em;
-      color: #F5E6CC; /* Light gold for the subtitle text */
+      color: #F5E6CC; /* Slightly lighter gold for contrast */
+      margin: 20px 0 0 0;
+      font-style: italic;
     }
 
-    /* Triangle design in the corner */
-    .triangle {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      width: 0;
-      height: 0;
-      border-left: 60px solid transparent;
-      border-right: 60px solid transparent;
-      border-bottom: 60px solid #E3B23C; /* Gold triangle */
-    }
-
-    /* Animated runner */
-    .runner {
-      position: absolute;
-      left: 20px;
-      bottom: 20px;
-      width: 150px;
-    }
-
-    /* Button styles */
-    button {
-      background-color: #E3B23C;
-      border: none;
-      color: black;
-      padding: 10px 20px;
-      font-size: 1.2em;
-      cursor: pointer;
-      margin-top: 20px;
-      transition: background-color 0.3s;
-    }
-
-    button:hover {
-      background-color: #F5E6CC;
+    /* Subtle gold line separator for refinement */
+    .separator {
+      width: 50%;
+      height: 2px;
+      background-color: #E3B23C; /* Gold line */
+      margin: 30px auto;
     }
   </style>
 </head>
@@ -85,16 +60,14 @@
     <!-- Club name -->
     <h1>ASCEND</h1>
     
+    <!-- Gold line separator for elegance -->
+    <div class="separator"></div>
+    
     <!-- Random activity display -->
     <h2 id="randomWord">Loading...</h2>
-    <p>Engage in an activity today!</p>
-
-    <!-- Refresh activity button -->
-    <button onclick="refreshActivity()">New Activity</button>
-
-    <!-- Decorative elements -->
-    <div class="triangle"></div>
-    <img src="https://qu4ntx.github.io/ascend/runner.png" alt="Running man" class="runner">
+    
+    <!-- Instruction text -->
+    <p>Engage in an activity today</p>
   </div>
 
   <script>
@@ -113,11 +86,7 @@
       return activities[randomIndex];
     }
 
-    function refreshActivity() {
-      document.getElementById("randomWord").textContent = getRandomActivity();
-    }
-
-    // Initial load
+    // Load random activity when the page loads
     document.getElementById("randomWord").textContent = getRandomActivity();
   </script>
 
