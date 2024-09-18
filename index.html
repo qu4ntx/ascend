@@ -54,6 +54,27 @@
       z-index: 0; /* Keep the background behind other content */
     }
 
+    /* Media query for small screens */
+    @media (max-width: 600px) {
+      .container {
+        transform: translate(0px, -20px); /* Adjust translation for smaller screens */
+      }
+
+      .circle {
+        width: 30px; /* Smaller circle for mobile */
+        height: 30px;
+      }
+
+      .sport {
+        font-size: 2.5em; /* Smaller font size for mobile */
+      }
+
+      body::before {
+        width: 250px; /* Smaller background image for mobile */
+        height: 250px;
+      }
+    }
+
   </style>
 </head>
 <body>
