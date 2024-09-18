@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sports Division</title>
   <style>
-    /* General body styling */
+    /* General body styling with background image */
     body {
       display: flex;
       justify-content: center;
@@ -14,7 +14,8 @@
       margin: 0;
       background-color: #040000; /* Dark black background */
       font-family: 'Trebuchet MS', sans-serif; /* Closest font to the one in the design */
-      position: relative;
+      background: url('web_design_ascend.png') no-repeat left bottom; /* Background image at the bottom-left */
+      background-size: contain; /* Contain the image within the body */
     }
 
     /* Main container */
@@ -39,18 +40,6 @@
       color: #CCB045; /* Gold color for the text */
     }
 
-    /* Decorative element for bottom corner */
-    .bottom-deco {
-      position: fixed; /* Fixes the image at the bottom-right of the viewport */
-      bottom: 0;
-      right: 0;
-      width: 500px;
-      height: 500px;
-      background: url('web_design_ascend.png');
-      background-position: left bottom;
-      background-size: contain;
-    }
-
   </style>
 </head>
 <body>
@@ -65,28 +54,6 @@
     </div>
   </div>
 
-  <!-- Fixed bottom corner decoration -->
-  <div class="bottom-deco"></div>
-
   <script>
     const sports = [
-      "Cycling", 
-      "Weightlifting", 
-      "Basketball", 
-      "Futsal", 
-      "Hiking", 
-      "Table Tennis", 
-      "Running"
-    ];
-
-    function getRandomSport() {
-      const randomIndex = Math.floor(Math.random() * sports.length);
-      return sports[randomIndex];
-    }
-
-    // Load a random sport division when the page loads
-    document.getElementById("randomSport").textContent = getRandomSport();
-  </script>
-
-</body>
-</html>
+      "
