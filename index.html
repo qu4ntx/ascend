@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ASCEND Club - Random Activity</title>
+  <title>ASCEND Sports Divisions</title>
   <style>
     /* General body styling */
     body {
@@ -12,82 +12,137 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      background-color: #000000; /* Elegant black background */
-      font-family: 'Georgia', serif; /* Serif font for a high-class feel */
-      color: #E3B23C; /* Rich gold color */
+      background-color: #F5F5F5; /* Light grey background for contrast */
+      font-family: 'Arial', sans-serif;
     }
 
-    /* Central container for content */
-    .container {
+    /* Main container */
+    .card-container {
+      background-color: #FFFFFF; /* White background for the card */
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+      max-width: 400px;
+      width: 100%;
       text-align: center;
     }
 
-    /* Main header style for ASCEND */
+    /* Card Title */
     h1 {
-      font-size: 5em; /* Large font for a bold statement */
-      font-weight: 600; /* Bold, but not too heavy */
-      letter-spacing: 2px; /* Spaced out letters for elegance */
-      margin: 0 0 20px 0;
+      font-size: 2em;
+      color: #333333;
+      margin-bottom: 20px;
     }
 
-    /* Subheader style for the random activity */
-    h2 {
-      font-size: 3em; /* Smaller than the main header, but still prominent */
-      font-weight: 400; /* Light font weight for contrast with the main header */
-      margin: 10px 0 0 0;
+    /* Section for random sport */
+    .sport-section {
+      background-color: #E3B23C; /* Gold background for the sport division */
+      color: #FFFFFF; /* White text for contrast */
+      font-size: 2.5em;
+      font-weight: bold;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
     }
 
-    /* Subtle instruction text */
+    /* Additional description text */
     p {
       font-size: 1.2em;
-      color: #F5E6CC; /* Slightly lighter gold for contrast */
-      margin: 20px 0 0 0;
-      font-style: italic;
+      color: #666666; /* Soft grey for description text */
+      margin-top: 0;
     }
 
-    /* Subtle gold line separator for refinement */
+    /* Cards for different sports divisions */
+    .sport-card {
+      background-color: #F5E6CC; /* Light gold */
+      color: #333333; /* Darker text for readability */
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+      font-size: 1.5em;
+      text-align: left;
+    }
+
+    /* Styling for headings within the card */
+    h2 {
+      font-size: 1.8em;
+      margin: 10px 0;
+      color: #333333; /* Dark color for the title */
+    }
+
+    /* Fine separator for cleaner look */
     .separator {
-      width: 50%;
-      height: 2px;
-      background-color: #E3B23C; /* Gold line */
-      margin: 30px auto;
+      border-top: 2px solid #E3B23C; /* Gold separator */
+      margin: 30px 0;
+    }
+
+    /* Styling for overall session/other summary */
+    .summary {
+      font-size: 1.2em;
+      color: #333333;
+      font-style: italic;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <!-- Club name -->
-    <h1>ASCEND</h1>
+  <div class="card-container">
+    <!-- Title of the card -->
+    <h1>Sport Division Overview</h1>
     
-    <!-- Gold line separator for elegance -->
+    <!-- Highlighted random sport division -->
+    <div class="sport-section" id="randomSport">
+      Loading...
+    </div>
+    
+    <!-- Some descriptive text -->
+    <p>Get involved in one of the sports divisions today!</p>
+
+    <!-- Example of multiple sports division cards -->
+    <div class="sport-card">
+      <h2>Cycling</h2>
+    </div>
+
+    <div class="sport-card">
+      <h2>Weightlifting</h2>
+    </div>
+
+    <div class="sport-card">
+      <h2>Basketball</h2>
+    </div>
+
+    <div class="sport-card">
+      <h2>Futsal</h2>
+    </div>
+
+    <!-- Separator line -->
     <div class="separator"></div>
-    
-    <!-- Random activity display -->
-    <h2 id="randomWord">Loading...</h2>
-    
-    <!-- Instruction text -->
-    <p>Engage in an activity today</p>
+
+    <!-- Overall summary or instructions -->
+    <div class="summary">
+      Progress your skills and try something new!
+    </div>
   </div>
 
   <script>
-    const activities = [
-      "cycling", 
-      "weightlifting", 
-      "basketball", 
-      "futsal", 
-      "hiking", 
-      "table tennis", 
-      "running"
+    const sports = [
+      "Cycling", 
+      "Weightlifting", 
+      "Basketball", 
+      "Futsal", 
+      "Hiking", 
+      "Table Tennis", 
+      "Running"
     ];
 
-    function getRandomActivity() {
-      const randomIndex = Math.floor(Math.random() * activities.length);
-      return activities[randomIndex];
+    function getRandomSport() {
+      const randomIndex = Math.floor(Math.random() * sports.length);
+      return sports[randomIndex];
     }
 
-    // Load random activity when the page loads
-    document.getElementById("randomWord").textContent = getRandomActivity();
+    // Load a random sport division
+    document.getElementById("randomSport").textContent = getRandomSport();
   </script>
 
 </body>
