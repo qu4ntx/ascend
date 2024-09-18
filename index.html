@@ -23,12 +23,13 @@
       align-items: center;
       text-align: left;
       z-index: 1; /* Ensure the container content is above the background image */
+      transform: translate(0px, -50px); /* Offset by 100px right and 50px down */
     }
 
     /* Circle style */
     .circle {
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       background-color: #CCB045; /* Gold circle */
       border-radius: 50%;
       margin-right: 20px;
@@ -36,7 +37,7 @@
 
     /* Sport name styling */
     .sport {
-      font-size: 5em;
+      font-size: 4em;
       color: #CCB045; /* Gold color for the text */
     }
 
@@ -48,7 +49,7 @@
       right: 0; /* Position at the right */
       width: 500px;
       height: 500px;
-      background: url('web_design_ascend.png') no-repeat bottom right;
+      background: url('web_design_ascend.png') no-repeat bottom right; /* Refers to the correct image */
       background-size: contain;
       z-index: 0; /* Keep the background behind other content */
     }
