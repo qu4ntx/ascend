@@ -18,26 +18,26 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      background-color: #F2C042; /* Dark black background */
-      font-family: 'Montserrat Alternates', sans-serif; /* Use Montserrat Alternates font */
-      font-weight: 500; /* Medium weight */
+      background-color: #F2C042; /* Background color */
+      font-family: 'Montserrat Alternates', sans-serif; /* Use Montserrat Alternates font for the sports division */
       position: relative;
     }
 
     /* Main container */
     .container {
       display: flex;
-      align-items: center;
+      flex-direction: column; /* Stack the sports name and description vertically */
+      align-items: left;
       text-align: left;
       z-index: 1; /* Ensure the container content is above the background image */
-      transform: translate(0px, -50px); /* Offset by 0px right and 50px down */
+      transform: translate(0px, -50px); /* Offset vertically by 50px */
     }
 
     /* Circle style */
     .circle {
       width: 40px;
       height: 40px;
-      background-color: #0f0500; /* Gold circle */
+      background-color: #0f0500; /* Dark circle */
       border-radius: 50%;
       margin-right: 20px;
     }
@@ -45,7 +45,17 @@
     /* Sport name styling */
     .sport {
       font-size: 4em;
-      color: #0f0500; /* Gold color for the text */
+      color: #0f0500; /* Dark color for the text */
+      margin-bottom: 10px; /* Space between the sports name and the description */
+    }
+
+    /* Description styling */
+    .description {
+      font-family: Arial, sans-serif; /* Arial for the description text */
+      font-size: 1.2em; /* Subtle smaller text size */
+      color: #0f0500; /* Dark color to match the aesthetic */
+      max-width: 500px; /* Limit the width to maintain a clean look */
+      line-height: 1.5; /* Improve readability */
     }
 
     /* Background decorative image, fixed to bottom right */
@@ -76,6 +86,11 @@
         font-size: 2.5em; /* Smaller font size for mobile */
       }
 
+      .description {
+        font-size: 1em; /* Smaller text for mobile */
+        max-width: 300px; /* Reduce max-width on smaller screens */
+      }
+
       body::before {
         width: 250px; /* Smaller background image for mobile */
         height: 250px;
@@ -93,6 +108,11 @@
     <!-- Random sport division display -->
     <div class="sport" id="randomSport">
       Loading...
+    </div>
+
+    <!-- Description text -->
+    <div class="description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin auctor est sit amet nulla convallis, vel fringilla libero dignissim.
     </div>
   </div>
 
