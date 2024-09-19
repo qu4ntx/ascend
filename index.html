@@ -24,6 +24,17 @@
       position: relative;
     }
 
+    /* ASCEND orientation text */
+    .header-text {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-family: Arial, sans-serif;
+      font-size: 1.5em; /* Regular size for desktop */
+      color: #0f0500;
+      z-index: 10; /* Make sure it stays above all other elements */
+    }
+
     /* Main container */
     .container {
       display: flex;
@@ -31,7 +42,7 @@
       align-items: flex-start;
       text-align: left;
       z-index: 1; /* Ensure the container content is above the background image */
-      transform: translate(0px, -60px); /* Offset vertically by 50px */
+      transform: translate(0px, -50px); /* Offset vertically by 50px */
     }
 
     /* Row for the circle and sport name */
@@ -81,7 +92,7 @@
     /* Media query for small screens */
     @media (max-width: 600px) {
       .container {
-        transform: translate(0px, -40px); /* Adjust translation for smaller screens */
+        transform: translate(0px, -20px); /* Adjust translation for smaller screens */
       }
 
       .circle {
@@ -102,11 +113,21 @@
         width: 250px; /* Smaller background image for mobile */
         height: 250px;
       }
+
+      /* Adjust header text size for smaller screens */
+      .header-text {
+        font-size: 1.2em; /* Smaller size for mobile */
+      }
     }
 
   </style>
 </head>
 <body>
+
+  <!-- Fixed "ASCEND orientation" text in the top-left -->
+  <div class="header-text">
+    ASCEND orientation
+  </div>
 
   <div class="container">
     <!-- Sport row (circle and name) -->
@@ -122,7 +143,7 @@
 
     <!-- Description text -->
     <div class="description">
-      Look around! Find someone from this division and get to know them. But do it fast. It's a race!
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin auctor est sit amet nulla convallis, vel fringilla libero dignissim.
     </div>
   </div>
 
