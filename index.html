@@ -158,16 +158,30 @@
       "futsal", 
       "hiking", 
       "table tennis", 
-      "running"
+      "running",
+      "tennis",
+      "wall climbing"
     ];
 
     function getRandomSport() {
-      const randomIndex = Math.floor(Math.random() * sports.length);
-      return sports[randomIndex];
+      return sports[Math.floor(Math.random() * sports.length)];
     }
 
-    // Load a random sport division when the page loads
-    document.getElementById("randomSport").textContent = getRandomSport();
+    function assignSport() {
+      let assignedSport = localStorage.getItem("assignedSport");
+      
+      // If no sport has been assigned yet, pick a random one and store it
+      if (!assignedSport) {
+        assignedSport = getRandomSport();
+        localStorage.setItem("assignedSport", assignedSport);
+      }
+
+      // Display the assigned sport
+      document.getElementById("randomSport").textContent = assignedSport;
+    }
+
+    // Run on page load
+    assignSport();
   </script>
 
 </body>
